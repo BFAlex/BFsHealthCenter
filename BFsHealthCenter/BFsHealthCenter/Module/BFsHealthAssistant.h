@@ -12,8 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BFsHealthAssistant : NSObject
 
+//
++ (BOOL)isDataAvailable;
+//
 + (instancetype)sharedAssistant;
 - (void)destoryAssistant;
+
 
 @end
 

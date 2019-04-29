@@ -26,6 +26,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>使用健康记录数据</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>更新健康数据</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>分享健康数据</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

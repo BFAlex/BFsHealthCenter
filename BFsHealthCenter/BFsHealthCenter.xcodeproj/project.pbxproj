@@ -14,6 +14,7 @@
 		949FF6DA22774E3400B3943F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949FF6D822774E3400B3943F /* LaunchScreen.storyboard */; };
 		949FF6DD22774E3400B3943F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 949FF6DC22774E3400B3943F /* main.m */; };
 		949FF6E622774E8100B3943F /* BFsHealthAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 949FF6E522774E8100B3943F /* BFsHealthAssistant.m */; };
+		949FF6E92277500100B3943F /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949FF6E82277500100B3943F /* HomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		949FF6DC22774E3400B3943F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		949FF6E422774E8100B3943F /* BFsHealthAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFsHealthAssistant.h; sourceTree = "<group>"; };
 		949FF6E522774E8100B3943F /* BFsHealthAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFsHealthAssistant.m; sourceTree = "<group>"; };
+		949FF6E82277500100B3943F /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		949FF6EA2277500100B3943F /* BFsHealthCenter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BFsHealthCenter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949FF6E92277500100B3943F /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +51,7 @@
 			children = (
 				949FF6CC22774E3000B3943F /* BFsHealthCenter */,
 				949FF6CB22774E3000B3943F /* Products */,
+				949FF6E72277500000B3943F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +66,7 @@
 		949FF6CC22774E3000B3943F /* BFsHealthCenter */ = {
 			isa = PBXGroup;
 			children = (
+				949FF6EA2277500100B3943F /* BFsHealthCenter.entitlements */,
 				949FF6E322774E6400B3943F /* Module */,
 				949FF6CD22774E3000B3943F /* AppDelegate.h */,
 				949FF6CE22774E3000B3943F /* AppDelegate.m */,
@@ -82,6 +88,14 @@
 				949FF6E522774E8100B3943F /* BFsHealthAssistant.m */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		949FF6E72277500000B3943F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				949FF6E82277500100B3943F /* HomeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +129,11 @@
 				TargetAttributes = {
 					949FF6C922774E3000B3943F = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -299,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BFsHealthCenter/BFsHealthCenter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8M9ALB4QH;
 				INFOPLIST_FILE = BFsHealthCenter/Info.plist;
@@ -317,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BFsHealthCenter/BFsHealthCenter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8M9ALB4QH;
 				INFOPLIST_FILE = BFsHealthCenter/Info.plist;
