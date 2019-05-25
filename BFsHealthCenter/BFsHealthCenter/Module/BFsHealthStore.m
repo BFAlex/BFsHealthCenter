@@ -107,9 +107,10 @@ static dispatch_once_t onceToken;
     
     HKQuantity *quantity = [HKQuantity quantityWithUnit:[HKUnit countUnit] doubleValue:count];
     HKQuantityType *quantityType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
-//    HKDevice *device = [[HKDevice alloc] initWithName:@"iPhone" manufacturer:@"Apple" model:@"iPhone" hardwareVersion:@"iPhone6s Plus" firmwareVersion:@"iPhone6s Plus" softwareVersion:@"12.0" localIdentifier:@"iphone" UDIDeviceIdentifier:@"iphone"];
     
-    HKQuantitySample *quantituSample = [HKQuantitySample quantitySampleWithType:quantityType quantity:quantity startDate:startDate endDate:endDate];
+//    HKQuantitySample *quantituSample = [HKQuantitySample quantitySampleWithType:quantityType quantity:quantity startDate:startDate endDate:endDate];
+    HKDevice *device = [[HKDevice alloc] initWithName:@"iPhone" manufacturer:@"Apple" model:@"iPhone" hardwareVersion:@"iPhone8,2" firmwareVersion:@"iPhone8,2" softwareVersion:@"12.0" localIdentifier:@"iphone" UDIDeviceIdentifier:@"iphone"];
+    HKQuantitySample *quantituSample = [HKQuantitySample quantitySampleWithType:quantityType quantity:quantity startDate:startDate endDate:endDate device:device metadata:nil];
     
     [_healthStore saveObject:quantituSample withCompletion:^(BOOL success, NSError * _Nullable error) {
         //
