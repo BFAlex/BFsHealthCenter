@@ -13,8 +13,8 @@
 		949FF6D722774E3400B3943F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949FF6D622774E3400B3943F /* Assets.xcassets */; };
 		949FF6DA22774E3400B3943F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949FF6D822774E3400B3943F /* LaunchScreen.storyboard */; };
 		949FF6DD22774E3400B3943F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 949FF6DC22774E3400B3943F /* main.m */; };
-		949FF6E622774E8100B3943F /* BFsHealthAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 949FF6E522774E8100B3943F /* BFsHealthAssistant.m */; };
-		949FF6E92277500100B3943F /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949FF6E82277500100B3943F /* HomeKit.framework */; };
+		949FF6E622774E8100B3943F /* BFsHealthStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 949FF6E522774E8100B3943F /* BFsHealthStore.m */; };
+		C494DB79229923EF005FBB03 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C494DB78229923EF005FBB03 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,11 @@
 		949FF6D922774E3400B3943F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		949FF6DB22774E3400B3943F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		949FF6DC22774E3400B3943F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		949FF6E422774E8100B3943F /* BFsHealthAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFsHealthAssistant.h; sourceTree = "<group>"; };
-		949FF6E522774E8100B3943F /* BFsHealthAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFsHealthAssistant.m; sourceTree = "<group>"; };
-		949FF6E82277500100B3943F /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		949FF6E422774E8100B3943F /* BFsHealthStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFsHealthStore.h; sourceTree = "<group>"; };
+		949FF6E522774E8100B3943F /* BFsHealthStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFsHealthStore.m; sourceTree = "<group>"; };
 		949FF6EA2277500100B3943F /* BFsHealthCenter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BFsHealthCenter.entitlements; sourceTree = "<group>"; };
+		C494DB78229923EF005FBB03 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C494DB7A22992620005FBB03 /* BFsHealthStoreHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFsHealthStoreHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949FF6E92277500100B3943F /* HomeKit.framework in Frameworks */,
+				C494DB79229923EF005FBB03 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +85,9 @@
 		949FF6E322774E6400B3943F /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				949FF6E422774E8100B3943F /* BFsHealthAssistant.h */,
-				949FF6E522774E8100B3943F /* BFsHealthAssistant.m */,
+				C494DB7A22992620005FBB03 /* BFsHealthStoreHeader.h */,
+				949FF6E422774E8100B3943F /* BFsHealthStore.h */,
+				949FF6E522774E8100B3943F /* BFsHealthStore.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -93,7 +95,7 @@
 		949FF6E72277500000B3943F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				949FF6E82277500100B3943F /* HomeKit.framework */,
+				C494DB78229923EF005FBB03 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,8 +132,11 @@
 					949FF6C922774E3000B3943F = {
 						CreatedOnToolsVersion = 10.2;
 						SystemCapabilities = {
-							com.apple.HomeKit = {
+							com.apple.HealthKit = {
 								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
 							};
 						};
 					};
@@ -175,7 +180,7 @@
 			files = (
 				949FF6D222774E3000B3943F /* ViewController.m in Sources */,
 				949FF6DD22774E3400B3943F /* main.m in Sources */,
-				949FF6E622774E8100B3943F /* BFsHealthAssistant.m in Sources */,
+				949FF6E622774E8100B3943F /* BFsHealthStore.m in Sources */,
 				949FF6CF22774E3000B3943F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,14 +325,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BFsHealthCenter/BFsHealthCenter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8M9ALB4QH;
+				DEVELOPMENT_TEAM = 9V8N93HLK3;
 				INFOPLIST_FILE = BFsHealthCenter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BFs.BFsHealthCenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TestAppIDs.BFsHealthStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,14 +344,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BFsHealthCenter/BFsHealthCenter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8M9ALB4QH;
+				DEVELOPMENT_TEAM = 9V8N93HLK3;
 				INFOPLIST_FILE = BFsHealthCenter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BFs.BFsHealthCenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TestAppIDs.BFsHealthStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>健康中心</string>
+	<string>Healthy</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,12 +26,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
-	<string>使用健康记录数据</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>更新健康数据</string>
+	<string>授权写入数据(visit write &quot;health&quot;)</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>分享健康数据</string>
+	<string>授权分享数据(visit share &quot;health&quot;)</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>授权记录数据(visit read &quot;health&quot;)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

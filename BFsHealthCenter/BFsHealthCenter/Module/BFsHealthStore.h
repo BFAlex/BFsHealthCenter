@@ -7,17 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BFsHealthStoreHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BFsHealthAssistant : NSObject
+@interface BFsHealthStore : NSObject
 
 //
 + (BOOL)isDataAvailable;
 //
 + (instancetype)sharedAssistant;
 - (void)destoryAssistant;
-
+//
+- (void)setupHealthStore:(HSResultBlock)resultBlock;
+- (void)queryStepCount:(HSResultBlock)resultBlock;
+- (void)saveStepCount:(double)count andResultBlock:(HSResultBlock)resultBlock;
 
 @end
 
